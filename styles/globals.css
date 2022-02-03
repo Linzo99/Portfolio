@@ -1,16 +1,12 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+@layer components {
+    .glass {
+        @apply bg-white/40 drop-shadow-sm shadow-sm backdrop-blur-[1rem] rounded-xl border-[1px] border-white/50;
+    }
+    .repo-card > div {
+        @apply bg-white/40 hover:bg-white/60 drop-shadow-sm shadow-sm backdrop-blur-[1rem] border-l-white/70 border-t-white/70 rounded-xl border-[1px] border-white/50 text-[22px] !important;
+    }
 }
